@@ -1,0 +1,476 @@
+//out:true
+@import "antd/dist/antd.css";
+
+.form-modal {
+  border-radius: 10px;
+  background: linear-gradient(#ccd8f1, #e7edf7);
+  padding-bottom: 0;
+
+  .ant-modal-content,
+  .ant-modal-body,
+  .ant-modal-header {
+    background: transparent;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .form-wrap {
+    width: 45%;
+    margin: 0 0 0 50%;
+    input,
+    .ant-select {
+      border-bottom: 1px solid #4b4b4b;
+    }
+  }
+  .login-form-wrap {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.menu {
+  background-color: #13598b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 0 9px 3px rgb(41 41 41 / 20%);
+
+  .center {
+    width: 1200px !important;
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+
+  .nav {
+    a {
+      margin: 0 20px;
+      color: #fff;
+    }
+    a.active {
+      border-bottom: 1px solid #fff;
+      font-weight: 700;
+    }
+  }
+
+  .user {
+    font-size: 28px;
+  }
+}
+
+.index {
+  height: 100vh !important;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(
+    to right top,
+    #1868a1,
+    #0c4670,
+    #148d4d,
+    #2c1488,
+    #0c4670,
+    #1868a1
+  );
+  background-size: 300% 300%;
+  -webkit-animation: Rainbow 60s infinite;
+  animation: Rainbow 60s infinite;
+
+  .content {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .center {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    .left {
+      h1 {
+        color: #fff;
+        font-size: 46px;
+      }
+
+      .left-splash {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 22%;
+        width: 500px;
+        margin-left: -3em;
+        text-align: center;
+        height: 25em;
+
+        img {
+          width: 216px;
+          height: 90px;
+        }
+
+        .text {
+          margin: 20px 0;
+          color: #fff;
+        }
+      }
+    }
+
+    .right {
+      padding: 160px 0;
+
+      h3 {
+        color: #fff;
+      }
+
+      .cards {
+        background: rgba(0, 0, 0, 0.3);
+        box-shadow: 0 3px 15px rgb(0 0 0 / 20%);
+        cursor: pointer;
+
+        .img-wraps {
+          position: relative;
+        }
+        .img-wrap {
+          position: relative;
+          height: 0;
+          padding-top: 100%;
+          img {
+            position: absolute;
+            width: 50%;
+            max-width: 50%;
+            height: auto;
+          }
+          img:first-child {
+            top: 0;
+            left: 0;
+          }
+          img:nth-child(2) {
+            top: 0;
+            left: 50%;
+          }
+          img:nth-child(3) {
+            top: 50%;
+            left: 0;
+          }
+          img:nth-child(4) {
+            top: 50%;
+            left: 50%;
+          }
+        }
+        .card-inner {
+          color: #fff;
+          text-align: center;
+        }
+        .play-hover {
+          position: absolute;
+          display: none;
+          left: 0;
+          top: 0;
+          color: #fff;
+          text-align: center;
+          line-height: 180px;
+          width: 100%;
+          font-size: 28px;
+        }
+      }
+      .cards:hover {
+        background: hsla(0, 0%, 100%, 0.15);
+        .play-hover {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .footer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    height: 60px;
+    line-height: 60px;
+    padding-bottom: 160px;
+
+    .footer-item {
+      margin: 0 16px;
+    }
+  }
+}
+
+.player-warp {
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0 -2px 16px rgba(#141414, 0.1);
+  border-top: 3px solid #1890ff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  .center {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .image {
+    width: 50px;
+  }
+  .player-btn-group {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    :hover {
+      color: #1890ff;
+    }
+    .play {
+      font-size: 34px;
+      margin: 0px 8px;
+    }
+  }
+}
+
+.now {
+  margin-top: 60px;
+  .content {
+    background-image: linear-gradient(rgb(196, 180, 180), rgb(157, 112, 118));
+    min-height: 440px;
+    .top {
+      width: 1200px !important;
+      margin: 0 auto;
+      padding: 80px 0;
+      color: #fff;
+    }
+  }
+
+  .center-wrap {
+    background: linear-gradient(#ccd8f1, #e7edf7);
+    .center {
+      width: 1200px !important;
+      margin: 0 auto;
+      padding: 80px 0;
+      color: #fff;
+      position: relative;
+    }
+  }
+
+  .left {
+    display: flex;
+    align-items: baseline;
+
+    .left-div {
+      margin-right: 8%;
+      img {
+        width: 288px;
+        height: 288px;
+        border-radius: 10px;
+      }
+      p {
+        margin: 16px 0;
+        font-size: 22px;
+        text-align: center;
+
+        span {
+          margin: 0 6px;
+        }
+      }
+
+      p:nth-last-child(1) {
+        font-size: 16px;
+      }
+    }
+
+    .l-right-div {
+      p:nth-child(1) {
+        font-size: 26px;
+      }
+
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .right {
+    h3,
+    h4 {
+      color: #ffffffb3;
+    }
+
+    .cards {
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 3px 15px rgb(0 0 0 / 20%);
+      cursor: pointer;
+
+      .img-wraps {
+        position: relative;
+      }
+      .img-wrap {
+        position: relative;
+        height: 0;
+        padding-top: 100%;
+        img {
+          position: absolute;
+          width: 50%;
+          max-width: 50%;
+          height: auto;
+        }
+        img:first-child {
+          top: 0;
+          left: 0;
+        }
+        img:nth-child(2) {
+          top: 0;
+          left: 50%;
+        }
+        img:nth-child(3) {
+          top: 50%;
+          left: 0;
+        }
+        img:nth-child(4) {
+          top: 50%;
+          left: 50%;
+        }
+      }
+      .card-inner {
+        color: #fff;
+        text-align: center;
+      }
+      .play-hover {
+        position: absolute;
+        display: none;
+        left: 0;
+        top: 0;
+        color: #fff;
+        text-align: center;
+        line-height: 120px;
+        width: 100%;
+        font-size: 28px;
+      }
+    }
+    .cards:hover {
+      background: hsla(0, 0%, 100%, 0.15);
+      .play-hover {
+        display: block;
+      }
+    }
+  }
+
+  .peoser {
+    position: sticky;
+    top: 15%;
+
+    img {
+      border-radius: 0.3em;
+      width: 274px;
+      height: 274px;
+      box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
+      overflow: hidden;
+    }
+
+    p {
+      font-size: 34px;
+      line-height: 2;
+      color: #222;
+      font-family: SangBleu;
+      font-weight: 500;
+      margin: 10px 0;
+    }
+
+    a {
+      display: block;
+      width: 74%;
+      border: 0;
+      padding: 0.9em 1.8em;
+      font-family: Roboto;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: 1.5em;
+      background-image: linear-gradient(90deg, #1868a1 0, #91c6ff 51%, #1868a1);
+      text-align: center;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: #fff;
+      position: relative;
+      top: 0;
+      box-shadow: 0 8px 15px rgb(0 0 0 / 10%);
+    }
+
+    a:hover {
+      background-size: 400% auto;
+      background-position: 100%;
+      color: #fff;
+      text-decoration: none;
+      top: -0.2em;
+    }
+  }
+
+  .center-right {
+    color: #222;
+
+    h3 {
+      font-size: 36px;
+    }
+
+    .t-video {
+      min-height: 1200px;
+
+      h3,
+      h4 {
+        color: #ffffffb3;
+      }
+
+      .cards {
+        background: #e7edf7;
+        box-shadow: 0 3px 15px rgb(0 0 0 / 20%);
+        cursor: pointer;
+        border-radius: 6px;
+
+        .img-wraps {
+          position: relative;
+        }
+        .img-wrap {
+          position: relative;
+          height: 160px;
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .card-inner {
+          color: #222;
+          text-align: center;
+        }
+        .play-hover {
+          position: absolute;
+          display: none;
+          left: 0;
+          top: 0;
+          color: #fff;
+          text-align: center;
+          line-height: 160px;
+          width: 100%;
+          font-size: 28px;
+        }
+      }
+      .cards:hover {
+        background: #fff;
+        .play-hover {
+          display: block;
+        }
+      }
+    }
+  }
+}
